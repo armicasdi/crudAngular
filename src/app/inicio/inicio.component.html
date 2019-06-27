@@ -1,0 +1,20 @@
+<main role="main" class="container">
+
+    <div class="starter-template">
+        <div>
+            <h1>*ngIf</h1>
+            <hr>
+            <div *ngIf="mostrar" class="card text-dark">
+                <div class="card-body">
+                    <h5 class="card-title"> {{ frase.autor }}</h5>
+                    <p class="card-text">{{frase.mensaje}}</p>
+
+                </div>
+                <hr>
+            </div>
+            <button (click)="mostrar = !mostrar" class="btn btn-outline-primary">Mostrar/Ocultar</button>
+        </div>
+    </div>
+
+
+</main>
