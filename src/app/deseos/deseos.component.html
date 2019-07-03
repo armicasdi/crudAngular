@@ -1,0 +1,54 @@
+<div class="grd">
+    <div>
+        <div>
+            <h1> Deseos </h1>
+            <form (ngSubmit)="newDeseo(newDeseoForm.value)" [formGroup]="newDeseoForm">
+                <input type="hidden" formControlName="id">
+
+                <label for="nombre">Nombre</label>
+                <input type="text" formControlName="nombre">
+
+                <label for="url_img">Imagen</label>
+                <input type="url" formControlName="url">
+
+                <input type="submit" class="btn btn-primary" role="button" aria-pressed="true" [disabled]="!newDeseoForm.valid" value="Guardar">
+            </form>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm" style="width: 18rem;" *ngFor="let deseo of deseos">
+            <img [src]="deseo.data.url" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">{{deseo.data.nombre}}</h5>
+
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md">
+                            <button class="btn btn-block btn-primary" role="button" (click)="editDeseo(deseo.id,deseo.data.nombre,deseo.data.url)">Editar</button>
+                        </div>
+                        <div class="col-md">
+                            <button class="btn btn-block btn-primary" role="button" (click)="deleteDeseo(deseo.id)">Eliminar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <!--   <div class="media-figure">
+                        <img [src]="deseo.data.url" class="rounded mx-auto d-block">
+
+                    </div>
+                    <div class="media-body">
+                        <p>{{deseo.data.nombre}}</p>
+                        <div class="btn--group">
+                            <button class="btn btn-primary btn-lg active" role="button" aria-pressed="true" (click)="editDeseo(deseo.id,deseo.data.nombre,deseo.data.url)">Editar</button>
+                            <button class="btn btn-primary btn-lg active" role="button" aria-pressed="true" (click)="deleteDeseo(deseo.id)">Eliminar</button>
+                        </div>
+                    </div> -->
+        </div>
+    </div>
+</div>
