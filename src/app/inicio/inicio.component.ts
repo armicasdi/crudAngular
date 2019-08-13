@@ -8,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class InicioComponent implements OnInit {
 mostrar = true;
 frase: any = {
-  mensaje: 'Bienvenido al inicio del curso de Angular',
-  autor: 'Claudio'
+  mensaje: 'Curso CRUD de Angular',
+  autor: 'Arturo Castro'
 }
   constructor() { }
 

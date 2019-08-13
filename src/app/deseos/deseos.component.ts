@@ -11,18 +11,21 @@ export class DeseosComponent implements OnInit {
   public deseos = [];
   public documentId = null;
   public currentStatus = 1;
+
   public newDeseoForm = new FormGroup({
     nombre: new FormControl('', Validators.required),
     url: new FormControl('', Validators.required),
+    desc: new FormControl('', Validators.required),
     id: new FormControl('')
   });
 
-  constructor(private firestoreService: FirestoreService) { 
-    
+  constructor(private firestoreService: FirestoreService) {
+
     this.newDeseoForm.setValue({
       id: '',
       nombre: '',
-      url: ''
+      url: '',
+      desc: ''
     });
 
   }
@@ -44,7 +47,8 @@ export class DeseosComponent implements OnInit {
     if (this.currentStatus == 1) {
       let data = {
         nombre: form.nombre,
-        url: form.url
+        url: form.url,
+        descripcion: form.desc
       }
       this.firestoreService.createDeseo(data).then(() => {
         console.log('Documento creado exitósamente!');
@@ -59,7 +63,8 @@ export class DeseosComponent implements OnInit {
     } else {
       let data = {
         nombre: form.nombre,
-        url: form.url
+        url: form.url,
+        descripcion: form.desc
       }
       this.firestoreService.updateDeseo(documentId, data).then(() => {
         this.currentStatus = 1;
@@ -87,7 +92,7 @@ export class DeseosComponent implements OnInit {
       editSubscribe.unsubscribe();
     });
   }
-  
+
   public deleteDeseo(documentId) {
     this.firestoreService.deleteDeseo(documentId)
   }

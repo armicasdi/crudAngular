@@ -8,11 +8,11 @@ import { Observable } from 'rxjs';
 export class FirestoreService {
 
   constructor(private firestore:AngularFirestore) {
-    
+
    }
 
      //Crea un nuevo deseo
-  public createDeseo(data: {nombre: string, url: string}) {
+  public createDeseo(data: {nombre: string, url: string, descripcion: string}) {
     return this.firestore.collection('deseo').add(data);
   }
   //Obtiene un deseo
@@ -37,5 +37,3 @@ export class FirestoreService {
   }
 
 }
-
-

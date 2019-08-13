@@ -1,0 +1,16 @@
+.ngImg {
+  width: 30%;
+}
+
+.flex-container {
+  display: flex;
+
+}
+
+.descripcion-container {
+  padding: 50px;
+}
+
+.starter-template {
+  margin-bottom: 50px;
+}

@@ -2,16 +2,26 @@
     <div>
         <div>
             <h1> Deseos </h1>
+
             <form (ngSubmit)="newDeseo(newDeseoForm.value)" [formGroup]="newDeseoForm">
                 <input type="hidden" formControlName="id">
 
-                <label for="nombre">Nombre</label>
-                <input type="text" formControlName="nombre">
+                <div class="grupoF">
+                  <label for="nombre" class="mpadr">Nombre:</label>
+                  <input type="text" class="mpadr right input"  formControlName="nombre" placeholder="Titulo " required>
+                  </div>
 
-                <label for="url_img">Imagen</label>
-                <input type="url" formControlName="url">
+                <div class="grupoF">
+                  <label for="url_img" class="mpadr">Imagen:</label>
+                  <input type="url" class="mpadr right input" formControlName="url" placeholder="Imagen " required>
+                </div>
 
-                <input type="submit" class="btn btn-primary" role="button" aria-pressed="true" [disabled]="!newDeseoForm.valid" value="Guardar">
+                <div class="grupoF">
+                  <label for="desc" class="mpadr">Descripcion:</label>
+                  <input type="text" class="mpadr right input" formControlName="desc" placeholder="Descripcion" required>
+                </div>
+
+                <input type="submit" class="btn btn-primary mpadr submit" role="button" aria-pressed="true" [disabled]="!newDeseoForm.valid" value="Guardar">
             </form>
         </div>
     </div>
@@ -34,21 +44,6 @@
                     </div>
                 </div>
             </div>
-
-
-
-
-            <!--   <div class="media-figure">
-                        <img [src]="deseo.data.url" class="rounded mx-auto d-block">
-
-                    </div>
-                    <div class="media-body">
-                        <p>{{deseo.data.nombre}}</p>
-                        <div class="btn--group">
-                            <button class="btn btn-primary btn-lg active" role="button" aria-pressed="true" (click)="editDeseo(deseo.id,deseo.data.nombre,deseo.data.url)">Editar</button>
-                            <button class="btn btn-primary btn-lg active" role="button" aria-pressed="true" (click)="deleteDeseo(deseo.id)">Eliminar</button>
-                        </div>
-                    </div> -->
         </div>
     </div>
 </div>

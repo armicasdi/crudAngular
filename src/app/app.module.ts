@@ -8,7 +8,6 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { ProyectosComponent } from './proyectos/proyectos.component';
 import { DeseosComponent } from './deseos/deseos.component';
-
 import {FormsModule} from '@angular/forms'
 import {ReactiveFormsModule} from '@angular/forms'
 import { AngularFirestore } from 'angularfire2/firestore';
@@ -26,7 +25,7 @@ import { AngularFirestore } from 'angularfire2/firestore';
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    AngularFireModule.initializeApp(environment.firebase)
+    AngularFireModule.initializeApp(environment.firebaseConfig)
   ],
   providers: [AngularFirestore],
   bootstrap: [AppComponent]

@@ -4,7 +4,16 @@
     <div *ngFor="let proyecto of misProyectos" class="starter-template">
 
         <h1>{{proyecto.name}}</h1>
-        <img src={{proyecto.urlImagen}} class="img-fluid" alt="Responsive image">
+
+        <div class="flex-container">
+          <img src={{proyecto.urlImagen}} class="img-fluid ngImg" alt="Responsive image">
+          <div class="descripcion-container">
+            <h3>Descripcion:  </h3>
+            <p>{{proyecto.descripcion}}</p>
+          </div>
+        </div>
+        <hr>
+
     </div>
 
 </main>
