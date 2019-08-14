@@ -26,28 +26,25 @@
         </div>
     </div>
 </div>
-<div class="container">
-    <div class="row">
-        <div class="col-sm" style="width: 18rem;" *ngFor="let deseo of deseos">
-          <h1>{{deseo.data.nombre}}</h1>
-          <div class="flex-container">
-            <img [src]="deseo.data.url" class="img-fluid ngImg" alt="Responsive image">
-            <div class="descripcion-container">
-              <h3>Descripcion:  </h3>
-              <p>{{proyecto.descripcion}}</p>
-            </div>
+
+<main role="main" class="container">
+    <h1>Lista de Deseos</h1>
+    <hr>
+    <div *ngFor="let deseo of misProyectos" class="starter-template">
+
+        <h1>{{deseos.data.nombre}}</h1>
+
+        <div class="flex-container">
+          <img [src]="deseo.data.url" class="img-fluid ngImg" alt="Responsive image">
+          <div class="descripcion-container">
+            <h3>Descripcion:  </h3>
+            <p>{{deseo.data.descripcion}}</p>
+            <button class="btn btn-block btn-primary" role="button" (click)="editDeseo(deseo.id,deseo.data.nombre,deseo.data.url)">Editar</button>
+            <button class="btn btn-block btn-primary" role="button" (click)="deleteDeseo(deseo.id)">Eliminar</button>
           </div>
-          <hr>
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-md">
-                            <button class="btn btn-block btn-primary" role="button" (click)="editDeseo(deseo.id,deseo.data.nombre,deseo.data.url)">Editar</button>
-                        </div>
-                        <div class="col-md">
-                            <button class="btn btn-block btn-primary" role="button" (click)="deleteDeseo(deseo.id)">Eliminar</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
+        <hr>
+
     </div>
+
+</main>
