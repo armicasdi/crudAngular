@@ -3,7 +3,7 @@
         <div>
             <h1> Deseos </h1>
 
-            <form (ngSubmit)="newDeseo(newDeseoForm.value)" [formGroup]="newDeseoForm">
+            <form (ngSubmit)="newDeseo(newDeseoForm.value)" [formGroup]="newDeseoForm" class="flex-container">
                 <input type="hidden" formControlName="id">
 
                 <div class="grupoF">
@@ -29,10 +29,15 @@
 <div class="container">
     <div class="row">
         <div class="col-sm" style="width: 18rem;" *ngFor="let deseo of deseos">
-            <img [src]="deseo.data.url" class="card-img-top">
-            <div class="card-body">
-                <h5 class="card-title">{{deseo.data.nombre}}</h5>
-
+          <h1>{{deseo.data.nombre}}</h1>
+          <div class="flex-container">
+            <img [src]="deseo.data.url" class="img-fluid ngImg" alt="Responsive image">
+            <div class="descripcion-container">
+              <h3>Descripcion:  </h3>
+              <p>{{proyecto.descripcion}}</p>
+            </div>
+          </div>
+          <hr>
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md">
@@ -46,4 +51,3 @@
             </div>
         </div>
     </div>
-</div>
