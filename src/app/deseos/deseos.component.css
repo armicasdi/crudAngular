@@ -1,5 +1,5 @@
 .grd {
-  padding: 50px;
+  padding: 40px;
 }
 .mpadr{
   padding-right: 10px;
@@ -22,4 +22,17 @@
 
 .flex-container {
   display: flex;
+}
+
+.descripcion-container{
+  margin-left: 100px;
+  padding: 50px;
+}
+.ngImg {
+  width: 250px;
+}
+.flex-buttons {
+  display: flex;
+  width: 200px;
+  align-items: center;
 }
