@@ -40,7 +40,7 @@
             <h3>Descripcion:  </h3>
             <p>{{deseo.data.descripcion}}</p>
             <div class="flex-buttons" >
-              <button class="btn btn-block btn-primary" role="button" (click)="editDeseo(deseo.id,deseo.data.nombre,deseo.data.url)">Editar</button>
+              <button class="btn btn-block btn-primary" role="button" [rot](click)="editDeseo(deseo.id,deseo.data.nombre,deseo.data.url)">Editar</button>
               <button class="btn btn-block btn-primary" role="button" (click)="deleteDeseo(deseo.id)">Eliminar</button>
             </div>
 

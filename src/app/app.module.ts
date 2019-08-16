@@ -11,6 +11,7 @@ import { DeseosComponent } from './deseos/deseos.component';
 import {FormsModule} from '@angular/forms'
 import {ReactiveFormsModule} from '@angular/forms'
 import { AngularFirestore } from 'angularfire2/firestore';
+import { DetailsComponent } from './deseos/details/details.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AngularFirestore } from 'angularfire2/firestore';
     NavbarComponent,
     InicioComponent,
     ProyectosComponent,
-    DeseosComponent
+    DeseosComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,
