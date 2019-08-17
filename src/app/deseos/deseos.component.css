@@ -1,27 +1,17 @@
 .grd {
   padding: 40px;
 }
-.mpadr{
-  padding-right: 10px;
-  margin-right: 10px;
-}
-.grupoF {
-  width: 20%;
-}
-.right {
-  float: right;
-}
-.input {
-  padding-left: 20px;
-  padding-right: 20px;
-}
 
-.submit {
-  margin-top: 20px;
-}
 
 .flex-container {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+
+input {
+  margin-left: 20px;
 }
 
 .descripcion-container{
@@ -35,4 +25,7 @@
   display: flex;
   width: 200px;
   align-items: center;
+}
+.flex-div{
+  display: flex;
 }
