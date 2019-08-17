@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireAuth } from '@angular/fire/auth';
+import { auth } from 'firebase/app';
+
 
 @Component({
   selector: 'app-inicio',
@@ -11,7 +14,15 @@ frase: any = {
   mensaje: 'Curso CRUD de Angular',
   autor: 'Arturo Castro'
 }
-  constructor() { }
+  constructor(public afAuth: AngularFireAuth) { }
+
+
+  login() {
+    this.afAuth.auth.signInWithPopup(new auth.GoogleAuthProvider());
+  }
+  logout() {
+    this.afAuth.auth.signOut();
+  }
 
   ngOnInit() {
   }

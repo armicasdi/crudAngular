@@ -1,6 +1,6 @@
 <main role="main" class="container">
 
-    <div class="starter-template">
+    <div class="starter-template" *ngIf="afAuth.user | async as user; else showLogin">
         <div>
             <h1>*ngIf</h1>
             <hr>
@@ -15,6 +15,15 @@
             <button (click)="mostrar = !mostrar" class="btn btn-outline-primary">Mostrar/Ocultar</button>
         </div>
     </div>
+
+
+
+    <ng-template #showLogin class="login">
+      <div class="flex-container ">
+        <p>Por Favor Iniciar Sesion para poder accesar a la Pagina.</p>
+        <button class="btn btn-primary"(click)="login()">Login with Google</button>
+      </div>
+    </ng-template>
 
 
 </main>
