@@ -8,7 +8,6 @@ import { ProyectosComponent } from './proyectos/proyectos.component';
 import { DeseosComponent } from './deseos/deseos.component';
 import {FormsModule} from '@angular/forms';
 import {ReactiveFormsModule} from '@angular/forms';
-import { DetailsComponent } from './deseos/details/details.component';
 
 //Angularfire2
 import { AngularFireAuthModule } from '@angular/fire/auth';
@@ -26,7 +25,7 @@ import { environment } from '../environments/environment';
     InicioComponent,
     ProyectosComponent,
     DeseosComponent,
-    DetailsComponent
+    
   ],
   imports: [
     BrowserModule,
