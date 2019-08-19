@@ -1,0 +1,22 @@
+<div class="grd">
+    <div>
+        <div>
+            <h1> Deseos </h1>
+            <div class="flex-container">
+              <div class="grupoF">
+                  <label for="nombre" >Nombre:</label>
+                  <input type="text"  placeholder="Titulo" required [(ngModel)]="data.nombre">
+                </div>
+                <div class="grupoF">
+                  <label for="url_img" class="">Imagen:</label>
+                  <input type="url" class=""  placeholder="Imagen " required [(ngModel)]="data.url">
+                </div>
+                <div class="grupoF">
+                  <label for="desc" class="">Descripcion:</label>
+                  <input type="text"   placeholder="Descripcion" required [(ngModel)]="data.descripcion">
+                </div><input type="submit" class="btn btn-primary" role="button" aria-pressed="true" value="Actualizar" (click)="updateDeseo()">
+            </div>
+
+        </div>
+    </div>
+</div>

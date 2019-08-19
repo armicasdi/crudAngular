@@ -37,7 +37,7 @@
             <h3>Descripcion:  </h3>
             <p>{{deseo.data.descripcion}}</p>
             <div class="" >
-              <button class="btn btn-block btn-primary" role="button" (click)="editDeseo(deseo.id,deseo.data.nombre,deseo.data.url)">Editar</button>
+              <button class="btn btn-block btn-primary" role="button" [routerLink]="['/details', deseo.id]">Editar</button>
               <button class="btn btn-block btn-primary" role="button" (click)="deleteDeseo(deseo.id)">Eliminar</button>
             </div>
 

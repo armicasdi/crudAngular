@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {AngularFirestore, AngularFirestoreDocument} from 'angularfire2/firestore'
 import { Observable } from 'rxjs';
+import { DeseoI } from 'src/app/interface/deseo.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +18,7 @@ export class FirestoreService {
   }
   //Obtiene un deseo
   public getDeseo(documentId: string) {
-    return this.firestore.collection('deseo').doc(documentId).snapshotChanges();
+    return this.firestore.collection<DeseoI>('deseo').doc(documentId).valueChanges();
   }
   //Obtiene todos los deseos
   public getDeseos() {

@@ -15,6 +15,7 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFirestore } from 'angularfire2/firestore';
 import { AngularFireModule } from 'angularfire2';
 import { environment } from '../environments/environment';
+import { DetailsComponent } from './details/details/details.component';
 
 
 
@@ -25,6 +26,7 @@ import { environment } from '../environments/environment';
     InicioComponent,
     ProyectosComponent,
     DeseosComponent,
+    DetailsComponent,
     
   ],
   imports: [
